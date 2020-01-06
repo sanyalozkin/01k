@@ -1,0 +1,59 @@
+1.
+CREATE TABLE teachers
+(
+Номер int,
+Имя varchar(100)
+);
+
+CREATE TABLE students
+номер int,
+Имя varchar(100)
+Код предмета int,
+Оценка int );
+
+CREATE TABLE subjects
+(
+код предмета int,
+название предмета varchar(75),
+номер преподователя int );
+
+
+2.
+INSERT INTO `subjects` (`кодпредмета`, `название`, `номерпреподователя`) VALUES ('1', 'Алгебра', '7'), ('2', 'химия', '5'),('3', 'физика', '8');
+INSERT INTO `teachers` (`Номер`, `Имя`) VALUES ('7', 'Иван '), ('5', 'ОЛЬГА'),('8', 'Дмитрий');
+INSERT INTO `students` (`номер`, `Имя`, `кодпредмета`, `оценка`) VALUES ('10', 'Денис', '7', '3'), ('15', 'Настя', '8', '5'), ('20', 'Ира', '5', '4'),
+('25', 'Илья','5', '4'),('30', 'Влад', '7', '5');
+
+
+3.
+SELECT * FROM subjects, students, teachers;
+
+
+4.
+INSERT INTO `students` (`номер`, `Имя`, `кодпредмета`, `оценка`) VALUES ('125', 'кирил', '8', '4'),
+('55', 'Надя', '7', '5'), ('66', 'Костя', '5', '3'), ('23', 'Инга', '7', '4'), ('45', 'Богдан', '7', '3'), 
+('77', 'Анна', '8', '4'), ('12', 'Алекс', '5', '3'), ('54', 'Егор', '8', '5'), ('62', 'Люба', '8', '3'), 
+('47', 'Даша', '7', '4'), ('33', 'Антон', '5', '2'), ('11', 'Илона', '7', '3'), ('48', 'Артем', '5', '4'), 
+('13', 'Жан', '8', '4'), ('73', 'Яков', '5', '3');
+
+
+5.
+SELECT name FROM `students`;
+
+6. 
+UPDATE `students` SET `rating` = '0' WHERE `students`.`id` = '12,66,73,13';
+
+7. 
+SELECT name FROM `students` WHERE rating = 'null';
+
+8.
+ SELECT name FROM `students` WHERE age>19; 
+
+9.
+ SELECT age, name FROM `students` ORDER BY age;
+
+10. 
+SELECT age, name FROM `students` ORDER BY age DESC;
+
+11. 
+SELECT name, age, rating FROM `students` WHERE rating >0 AND age ORDER BY age DESC;

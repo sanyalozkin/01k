@@ -1,0 +1,20 @@
+1.
+SELECT username FROM table1 ORDER BY username;
+
+2.
+SELECT phone_id, user_id FROM table2 WHERE phone_number=200 LIMIT 1,3;
+
+3.
+
+SELECT TABLE 1 USERNAME FROM TABLE 2 INNER JOIN USING(user_id) WHERE PHONE_NUMBER=202;
+4. 
+SELECT AVG (room_number) FROM table3;
+
+5.
+SELECT PHONE_ID FROM TABLE2 WHERE MAX PHONE_NUMBER; 
+
+6.
+SELECT table3.room_number FROM table1 INNER JOIN table2 USING(user_id) INNER JOIN table3 USING(phone_id) WHERE table1.username = 'qux'; 
+
+7.
+SELECT table2.phone_number FROM table1 INNER JOIN USING(user_id) WHERE table1.username like'ba%';
